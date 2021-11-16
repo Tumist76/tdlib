@@ -19,7 +19,7 @@ class CreateNewSupergroupChat extends TdFunction {
   String description;
 
   /// [location] Chat location if a location-based supergroup is being created
-  ChatLocation location;
+  ChatLocation? location;
 
   /// callback sign
   dynamic? extra;
@@ -42,7 +42,7 @@ class CreateNewSupergroupChat extends TdFunction {
       "title": this.title,
       "is_channel": this.isChannel,
       "description": this.description,
-      "location": this.location.toJson(),
+      "location": this.location?.toJson(),
       "@extra": this.extra,
     };
   }
